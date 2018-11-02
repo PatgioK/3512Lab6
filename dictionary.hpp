@@ -5,8 +5,18 @@
 #ifndef INC_3512LAB6_DICTIONARY_HPP
 #define INC_3512LAB6_DICTIONARY_HPP
 
+#include <map>
+#include <iterator>
+#include <fstream>
+using namespace std;
 
 class dictionary {
+private:
+    map<string,string> dict;
+public:
+    dictionary();
+    void print();
+    string findword(string word);
 
 };
 
