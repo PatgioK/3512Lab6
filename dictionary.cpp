@@ -18,7 +18,7 @@ dictionary::dictionary() {
 void dictionary::print(){
     map<string,string>::iterator iterator1;
     for(iterator1 = dict.begin(); iterator1 != dict.end(); ++iterator1) {
-        cout << iterator1->first << " " << iterator1->second;
+        cout << iterator1->first << ": " << iterator1->second << "\n";
     }
 }
 
@@ -29,3 +29,12 @@ string dictionary::findword(string word) {
     string def = dict.find(word)->second;
     return def;
 }
+
+void dictionary::newword(string word) {
+        string def;
+        cout << "enter new definition";
+        cin.clear();
+        cin.ignore();
+        getline(cin, def);
+        dict.insert(pair<string, string>(word, def));
+    }

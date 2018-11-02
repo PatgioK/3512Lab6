@@ -11,12 +11,12 @@
 using namespace std;
 
 class dictionary {
-private:
-    map<string,string> dict;
 public:
+    map<string,string> dict;
     dictionary();
     void print();
     string findword(string word);
+    void newword(string word);
 
 };
 
